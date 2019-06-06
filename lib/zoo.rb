@@ -15,4 +15,8 @@ class Zoo
   def add_employee(worker)
     @employees << worker
   end
+
+  def open?(date)
+    @season_opening_date <= date && date <= @season_closing_date
+  end
 end
