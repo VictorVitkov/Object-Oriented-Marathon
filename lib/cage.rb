@@ -1,0 +1,3 @@
+class Cage
+
+end
