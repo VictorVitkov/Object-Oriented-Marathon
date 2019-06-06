@@ -19,4 +19,14 @@ class Zoo
   def open?(date)
     @season_opening_date <= date && date <= @season_closing_date
   end
+
+  def add_animal(animal)
+    @cages.each do |cage|
+      if cage.empty?
+        cage.animal = animal
+        return
+      end
+    end
+    return "Your zoo is already at capacity!"
+  end
 end
